@@ -34,7 +34,7 @@ struct ToggleStyle2View: View {
                         .frame(width: 55, height: 55)
                         .shadow(radius: 1)
 
-                    Image(isOn ? "check" : "incomplete")
+                    Image(isOn ? "check" : "incomplete-small")
                             .resizable()
                             .frame(width: 30, height: 30)
 

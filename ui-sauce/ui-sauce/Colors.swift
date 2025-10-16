@@ -61,6 +61,31 @@ enum ProjectColors {
 
 enum Colors  {
 
+    static let vibrantRedGradient: LinearGradient = LinearGradient(
+        gradient: Gradient(colors: [
+            Color(red: 230/255, green: 38/255, blue: 80/255),
+            Color(red: 207/255, green: 0/255, blue: 46/255)
+        ]),
+        startPoint: .topLeading,
+        endPoint: .bottomTrailing
+    )
+
+    static let loadingRedGradient = LinearGradient(
+        gradient: Gradient(colors: [
+            Color(red: 200/255, green: 60/255, blue: 60/255),   // Red
+            Color(red: 247/255, green: 6/255, blue: 89/255),    // Pink
+            Color(red: 254/255, green: 121/255, blue: 77/255),  // Orange
+            Color(red: 255/255, green: 204/255, blue: 0/255)    // Yellow
+        ]),
+        startPoint: .topLeading,
+        endPoint: .bottomTrailing
+    )
+
+    static let vibrantRed =  Color(red: 207/255, green: 0/255, blue: 46/255)
+
+    static let skyBlue = Color(red: 16 / 255, green: 123 / 255, blue: 239 / 255, opacity: 1.0)
+    static let skyLightBlue = Color(red: 16 / 255, green: 123 / 255, blue: 239 / 255, opacity: 0.5)
+
     static let mediumBlue = Color(red: 64.0 / 255.0, green: 125.0 / 255.0, blue: 185.0 / 255.0, opacity: 1.0)
     static let lightBlue = Color(red: 227.0 / 255.0, green: 234.0 / 255.0, blue: 238.0 / 255.0, opacity: 1.0)
     static let newBlue = Color(red: 23 / 255, green: 99 / 255, blue: 178 / 255, opacity: 1)
@@ -100,4 +125,15 @@ enum Colors  {
     static let graySolidGradient = LinearGradient(gradient: Gradient(colors: [optionalGray, optionalGray]), startPoint: .leading, endPoint: .trailing)
     static let darkGreen = Color(red: 0/255, green: 120/255, blue: 90/255, opacity: 1)
     static let cardWhite = Color(red: 223/255, green: 226/255, blue: 229/255, opacity: 0.3)
+
+    static let graphGradient = LinearGradient(
+        gradient: Gradient(stops: [
+            .init(color: Color(red: 100/255, green: 116/255, blue: 139/255, opacity: 0.0), location: 0.0),
+            .init(color: Color(red: 100/255, green: 116/255, blue: 139/255, opacity: 0.15), location: 0.33),
+            .init(color: Color(red: 100/255, green: 116/255, blue: 139/255, opacity: 0.12), location: 0.66),
+            .init(color: Color(red: 100/255, green: 116/255, blue: 139/255, opacity: 0.0), location: 1.0)
+        ]),
+        startPoint: .leading,
+        endPoint: .trailing
+    )
 }

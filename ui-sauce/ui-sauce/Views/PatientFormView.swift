@@ -19,13 +19,13 @@ struct PatientFormView: View {
             VStack(alignment: .leading){
                 HStack{
                     Text("Patient Form")
-                        .font(.custom("Roboto-Medium", size: 25))
+                        .font(.lato(25, weight: .bold))
                         .foregroundStyle(ProjectColors.darkNavy)
                         .padding(.leading, 30)
                     Spacer()
-                    HStack(spacing: 0){
+                    HStack(alignment: .center, spacing: 0){
                         Text("Form Complete Status:")
-                            .font(.custom("Roboto-Regular", size: 18))
+                            .font(.lato(18, weight: .bold))
                             .foregroundStyle(ProjectColors.darkNavy)
                         Image("incomplete-circle")
                             .resizable()
@@ -49,7 +49,7 @@ struct PatientFormView: View {
                         VStack(spacing:40){
                             VStack(alignment: .leading, spacing: 3){
                                 Text("Last Name")
-                                    .font(.custom("Roboto-Regular", size: 16))
+                                    .font(.lato(16, weight: .bold))
                                     .foregroundStyle(ProjectColors.darkNavy)
                                 TextField("", text: $placeholder)
                                     .textFieldStyle(CheckInFieldStyle())
@@ -57,14 +57,14 @@ struct PatientFormView: View {
                             HStack(spacing: 30){
                                 VStack(alignment: .leading, spacing: 3){
                                     Text("First Name")
-                                        .font(.custom("Roboto-Regular", size: 16))
+                                        .font(.lato(16, weight: .regular))
                                         .foregroundStyle(ProjectColors.darkNavy)
                                     TextField("", text: $placeholder)
                                         .textFieldStyle(CheckInFieldStyle())
                                 }
                                 VStack(alignment: .leading, spacing: 3){
                                     Text("Middle Name")
-                                        .font(.custom("Roboto-Regular", size: 16))
+                                        .font(.lato(16, weight: .regular))
                                         .foregroundStyle(ProjectColors.darkNavy)
                                     TextField("", text: $placeholder)
                                         .textFieldStyle(CheckInFieldStyle())
@@ -76,14 +76,14 @@ struct PatientFormView: View {
                     HStack(spacing:30){
                         VStack(alignment: .leading, spacing: 3) {
                             Text("Insurance Policy Number")
-                                .font(.custom("Roboto-Regular", size: 16))
+                                .font(.lato(16, weight: .regular))
                                 .foregroundStyle(ProjectColors.darkNavy)
                             TextField("", text: $placeholder)
                                 .textFieldStyle(CheckInFieldStyle())
                         }
                         VStack(alignment: .leading, spacing: 3) {
                             Text("Primary Physician")
-                                .font(.custom("Roboto-Regular", size: 16))
+                                .font(.lato(16, weight: .regular))
                                 .foregroundStyle(ProjectColors.darkNavy)
                             TextField("", text: $placeholder)
                                 .textFieldStyle(CheckInFieldStyle())
@@ -92,21 +92,21 @@ struct PatientFormView: View {
                     HStack(spacing:30){
                         VStack(alignment: .leading, spacing: 3){
                             Text("Address")
-                                .font(.custom("Roboto-Regular", size: 16))
+                                .font(.lato(16, weight: .regular))
                                 .foregroundStyle(ProjectColors.darkNavy)
                             TextField("", text: $placeholder)
                                 .textFieldStyle(CheckInFieldStyle())
                         }
                         VStack(alignment: .leading, spacing: 3){
                             Text("State")
-                                .font(.custom("Roboto-Regular", size: 16))
+                                .font(.lato(16, weight: .regular))
                                 .foregroundStyle(ProjectColors.darkNavy)
                             TextField("", text: $placeholder)
                                 .textFieldStyle(CheckInFieldStyle())
                         }
                         VStack(alignment: .leading, spacing: 3){
                             Text("Zip")
-                                .font(.custom("Roboto-Regular", size: 16))
+                                .font(.lato(16, weight: .regular))
                                 .foregroundStyle(ProjectColors.darkNavy)
                             TextField("", text: $placeholder)
                                 .textFieldStyle(CheckInFieldStyle())
@@ -140,7 +140,7 @@ struct CheckInFieldStyle: TextFieldStyle {
         configuration
             .padding(.horizontal, 15)
             .padding(.vertical, 13)
-            .font(.custom("Roboto-Regular", size: 16))
+            .font(.lato(16, weight: .regular))
             .autocapitalization(.none)
             .background(
                 RoundedRectangle(cornerRadius: 1)
@@ -174,7 +174,7 @@ struct DropDownMenuView: View {
         HStack {
 
             Text(!selectedOption.isEmpty ? selectedOption : placeholder)
-                .font(.custom("Roboto-Regular", size: 16))
+                .font(.lato(16, weight: .regular))
                 .padding(.vertical, 15)
                 .accentColor(.black)
                 .padding(.leading, 13)
@@ -210,7 +210,7 @@ struct BirthdayPickerView: View{
                 .padding(.horizontal, 15)
                 .padding(.vertical, 6)
                 .accentColor(.black)
-                .font(.custom("Roboto-Regular", size: 14))
+                .font(.lato(16, weight: .regular))
                 .cornerRadius(4.0)
                 .onChange(of: birthDate) {
                     // generalPatientInfoViewModel.didBirthdayChange = true
@@ -244,7 +244,7 @@ struct CheckInButtonStyle: ButtonStyle {
             .foregroundColor(.green)
             .frame(maxWidth: .infinity)
             .padding(.vertical, 16)
-            .font(.custom("Roboto-Medium", size: 15))
+            .font(.lato(16, weight: .regular))
             .background(background)
             .cornerRadius(10)
 
