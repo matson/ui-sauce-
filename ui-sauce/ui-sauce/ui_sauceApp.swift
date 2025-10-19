@@ -26,6 +26,15 @@ extension Font {
         }
         return .custom(fontName, size: size)
     }
+    
+    static func robotoCondensed(_ size: CGFloat, weight: Font.Weight = .regular) -> Font {
+        let fontName = switch weight {
+        case .semibold: "RobotoCondensed-SemiBold"
+        case .bold: "RobotoCondensed-Bold"
+        default: "RobotoCondensed-Regular"
+        }
+        return .custom(fontName, size: size)
+    }
 }
 
 
@@ -34,7 +43,7 @@ extension Font {
 struct ui_sauceApp: App {
     var body: some Scene {
         WindowGroup {
-            CustomSlidersView()
+            RetroLoadingButtonView()
         }
     }
 }
